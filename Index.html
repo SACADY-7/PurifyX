@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Purification Model</title>
+
+    <!-- COMBINED CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: #f4f8fb;
+            color: #222;
+        }
+
+        header {
+            background: linear-gradient(to right, #3a7bd5, #00d2ff);
+            color: white;
+            text-align: center;
+            padding: 40px 15px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px;
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #333;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #0077ff;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: url('https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        section.content {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #005bbb;
+        }
+
+        p, li {
+            line-height: 1.7;
+            margin-bottom: 10px;
+            font-size: 17px;
+        }
+
+        .aqi-boxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .aqi-card {
+            padding: 20px;
+            border-radius: 10px;
+            font-weight: 600;
+            text-align: center;
+            color: white;
+        }
+
+        .good { background: #4caf50; }
+        .moderate { background: #ffeb3b; color: #333; }
+        .unhealthy-sens { background: #ff9800; }
+        .unhealthy { background: #f44336; }
+        .very-unhealthy { background: #8e24aa; }
+        .hazardous { background: #4a148c; }
+
+        .model-box {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            background: #111;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Air Purification Model</h1>
+        <p>Clean Air • Healthy Life • Smart Future</p>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#aqi">Air Quality Index</a>
+        <a href="#problem">Pollution Problem</a>
+        <a href="#need">Why Air Purifiers?</a>
+        <a href="#model">Our Model</a>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h2>India’s Air Quality Is Getting Worse</h2>
+        <p>Let's understand the challenges and explore smart purification systems.</p>
+    </section>
+
+    <!-- AQI SECTION -->
+    <section id="aqi" class="content">
+        <h2>What is the Air Quality Index (AQI)?</h2>
+        <p>The AQI indicates how polluted the air is. It ranges from <b>0 to 500</b>, divided into these categories:</p>
+
+        <div class="aqi-boxes">
+            <div class="aqi-card good">Good (0–50)</div>
+            <div class="aqi-card moderate">Moderate (51–100)</div>
+            <div class="aqi-card unhealthy-sens">Unhealthy for Sensitive Groups (101–150)</div>
+            <div class="aqi-card unhealthy">Unhealthy (151–200)</div>
+            <div class="aqi-card very-unhealthy">Very Unhealthy (201–300)</div>
+            <div class="aqi-card hazardous">Hazardous (301+)</div>
+        </div>
+    </section>
+
+    <!-- PROBLEM IN INDIA -->
+    <section id="problem" class="content">
+        <h2>Pollution Problems in India (2025)</h2>
+        <ul>
+            <li>Rapid urbanization and vehicle emissions increasing PM2.5 levels</li>
+            <li>Industrial waste and factory smoke polluting major cities</li>
+            <li>Crop burning in states like Punjab & Haryana</li>
+            <li>Construction dust contributing to suspended particles</li>
+            <li>In winter, smog traps pollutants close to the ground</li>
+            <li>Indoor pollution from cooking, smoke, chemicals & allergens</li>
+        </ul>
+    </section>
+
+    <!-- WHY WE NEED AIR PURIFIERS -->
+    <section id="need" class="content">
+        <h2>Why Do We Need Air Purifiers?</h2>
+        <p>Air purifiers help in removing harmful pollutants like dust, PM2.5, bacteria, smoke, and toxic gases.</p>
+
+        <ul>
+            <li>Reduces respiratory problems, allergies & asthma</li>
+            <li>Removes indoor smoke, dust particles, and pathogens</li>
+            <li>Keeps air clean during smog seasons</li>
+            <li>Protects children, elderly, and sensitive individuals</li>
+            <li>Improves sleep, immunity, and oxygen intake</li>
+        </ul>
+    </section>
+
+    <!-- MODEL -->
+    <section id="model" class="content">
+        <h2>Our Air Purification Model</h2>
+        <div class="model-box">
+            <p>This project demonstrates an **automated air purification system**.  
+            It includes:</p>
+
+            <ul>
+                <li>Real-time air quality monitoring</li>
+                <li>Activated Carbon + HEPA filtration</li>
+                <li>Dust sensor for PM level detection</li>
+                <li>Auto fan speed control based on AQI</li>
+                <li>LED indicators for Clean / Moderate / Polluted air</li>
+                <li>Low power consumption smart model</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2025 Air Purification Model | Designed by Sachin
+    </footer>
+
+</body>
+</html>
